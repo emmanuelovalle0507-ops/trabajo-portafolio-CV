@@ -120,7 +120,7 @@
         <div class="contadores-grid">
             <div class="contador fade-in">
                 <i class="fa-solid fa-briefcase"></i>
-                <span class="contador-numero" data-target="5">0</span>
+                <span class="contador-numero" data-target="6">0</span>
                 <p>Proyectos Realizados</p>
             </div>
             <div class="contador fade-in">
@@ -233,6 +233,14 @@
                         <i class="fa-solid fa-user-astronaut"></i>
                         <span>Agentes IA</span>
                     </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>RAG / pgvector</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-microchip"></i>
+                        <span>GPT-4o</span>
+                    </div>
                 </div>
             </div>
             <!-- BACKEND & LENGUAJES -->
@@ -252,12 +260,20 @@
                         <span>NestJS</span>
                     </div>
                     <div class="tech-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>FastAPI</span>
+                    </div>
+                    <div class="tech-item">
                         <i class="fa-solid fa-database"></i>
                         <span>SQL / Alembic</span>
                     </div>
                     <div class="tech-item">
-                        <i class="fa-solid fa-cubes"></i>
-                        <span>POO</span>
+                        <i class="fa-solid fa-database"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-cloud"></i>
+                        <span>Supabase</span>
                     </div>
                     <div class="tech-item">
                         <i class="fa-solid fa-cube"></i>
@@ -308,6 +324,18 @@
                 <h4><i class="fa-solid fa-laptop-code"></i> Frontend &amp; Otros</h4>
                 <div class="tech-items">
                     <div class="tech-item">
+                        <i class="fa-brands fa-react"></i>
+                        <span>React / Next.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-brands fa-js"></i>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-wind"></i>
+                        <span>TailwindCSS</span>
+                    </div>
+                    <div class="tech-item">
                         <i class="fa-brands fa-html5"></i>
                         <span>HTML5</span>
                     </div>
@@ -326,10 +354,6 @@
                     <div class="tech-item">
                         <i class="fa-solid fa-network-wired"></i>
                         <span>IoT</span>
-                    </div>
-                    <div class="tech-item">
-                        <i class="fa-solid fa-language"></i>
-                        <span>Inglés (A2)</span>
                     </div>
                 </div>
             </div>
@@ -453,10 +477,10 @@
                     </div>
                 </div>
             </div>
-            <!-- PROYECTO REAL: Asistente IA Personal -->
+            <!-- PROYECTO REAL: Nox AI Assistant -->
             <div class="proyecto fade-in">
                 <div class="proyecto-img">
-                    <img src="img/proyecto-asistente-ia-v2.jpg" alt="Asistente de IA Personal con OpenClaw" loading="lazy">
+                    <img src="img/proyecto-asistente-ia-v2.jpg" alt="Nox — AI Personal Assistant" loading="lazy">
                     <div class="proyecto-overlay">
                         <div class="proyecto-links">
                             <a href="https://github.com/emmanuelovalle0507-ops/nox-ai-assistant" target="_blank" rel="noopener noreferrer" aria-label="Ver código"><i class="fa-brands fa-github"></i></a>
@@ -464,14 +488,40 @@
                     </div>
                 </div>
                 <div class="proyecto-info">
-                    <span class="proyecto-tipo">Proyecto Personal</span>
-                    <h4>Asistente de IA Personal</h4>
-                    <p>Mi propio agente de IA construido con OpenClaw que automatiza tareas diarias: gestión de archivos, búsquedas inteligentes, resúmenes automáticos y control de herramientas locales mediante lenguaje natural.</p>
+                    <span class="proyecto-tipo">Proyecto Personal — Full-Stack IA</span>
+                    <h4>Nox — AI Personal Assistant</h4>
+                    <p>Asistente de IA full-stack con chat en streaming (SSE), búsqueda web, memoria a largo plazo, ingesta de documentos con RAG (pgvector), historial de conversaciones, soporte de voz y temas dark/light.</p>
                     <div class="proyecto-tags">
-                        <span>OpenClaw</span>
-                        <span>Claude</span>
-                        <span>Python</span>
-                        <span>Agentes IA</span>
+                        <span>FastAPI</span>
+                        <span>Next.js</span>
+                        <span>TypeScript</span>
+                        <span>GPT-4o</span>
+                        <span>Supabase</span>
+                        <span>RAG</span>
+                    </div>
+                </div>
+            </div>
+            <!-- PROYECTO REAL: ApliWeb-Vacaciones (Seekop) -->
+            <div class="proyecto proyecto-destacado fade-in">
+                <div class="proyecto-img">
+                    <img src="img/proyecto-vacaciones.jpg" alt="Sistema de Control de Vacaciones — Seekop" loading="lazy">
+                    <div class="proyecto-overlay">
+                        <div class="proyecto-links">
+                            <a href="https://github.com/emmanuelovalle0507-ops/ApliWeb-Vacaciones" target="_blank" rel="noopener noreferrer" aria-label="Ver código"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <span class="proyecto-tipo">Seekop Consulting — Proyecto Empresarial</span>
+                    <h4>Sistema de Control de Vacaciones</h4>
+                    <p>Aplicación full-stack para gestión de vacaciones con 4 roles (Employee, Manager, Admin, RRHH). Backend con FastAPI + SQLAlchemy + Alembic, frontend con Next.js 15 + React 18 + TailwindCSS, y base de datos PostgreSQL con Docker.</p>
+                    <div class="proyecto-tags">
+                        <span>FastAPI</span>
+                        <span>Next.js 15</span>
+                        <span>TypeScript</span>
+                        <span>PostgreSQL</span>
+                        <span>Docker</span>
+                        <span>Alembic</span>
                     </div>
                 </div>
             </div>
