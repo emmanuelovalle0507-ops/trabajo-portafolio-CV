@@ -136,9 +136,21 @@ btnArriba.addEventListener("click", function () {
 // ============================
 // SCROLL EVENT LISTENER
 // ============================
+function toggleHeaderShadow() {
+    var header = document.querySelector("header");
+    if (header) {
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    }
+}
+
 window.addEventListener("scroll", function () {
     actualizarNavActiva();
     toggleBtnArriba();
+    toggleHeaderShadow();
 });
 
 // ============================
