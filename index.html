@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Emmanuel Salas Ovalle - Desarrollador de IA en Seekop Consulting, Ingeniero en Desarrollo y Gestión de Software y Profesor de Robótica e Informática.">
+    <meta property="og:title" content="Emmanuel Salas Ovalle - Desarrollador IA & Software">
+    <meta property="og:description" content="Portafolio profesional de Emmanuel Salas Ovalle. Desarrollador de IA en Seekop Consulting, Desarrollo Web y Docencia Tecnológica.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     <link rel="stylesheet" href="estilo.css">
-    <title>Desarrollador Web</title>
+    <title>Emmanuel Salas Ovalle | Desarrollador IA & Software</title>
 </head>
 
 <body>
@@ -17,342 +24,560 @@
         <div class="contenido">
             <header>
                 <div class="contenido-header">
-                    <h1>/Ing. Desarrollo Software/</h1>
+                    <h1>/Emmanuel SO/</h1>
                     <nav id="nav" class="">
                         <ul id="links">
-                            <ul>
-    <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
-    <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>
-    <li><a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a></li>
-    <li><a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a></li>
-    <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
-</ul>
+                            <li><a href="#inicio" class="seleccionado">INICIO</a></li>
+                            <li><a href="#sobremi">SOBRE MI</a></li>
+                            <li><a href="#experiencia">EXPERIENCIA</a></li>
+                            <li><a href="#portfolio">PORTFOLIO</a></li>
+                            <li><a href="#contacto">CONTACTO</a></li>
                         </ul>
                     </nav>
 
-                    <!-- Icono del menu responsive -->
-                    <div id="icono-nav" onclick="responsiveMenu()">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
+                    <div class="header-acciones">
+                        <!-- Dark mode toggle -->
+                        <button id="tema-toggle" aria-label="Cambiar tema">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
 
-
-                    <div class="redes">
-                        <a href="https://api.whatsapp.com/send?phone=525534358485" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://www.linkedin.com/in/salas-ovalle-emmanuel-2b5255261/" target="_blank"><i class="fa-brands fa-linkedin" rel="noopener noreferrer"></i></a>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=2519260043esalaso@gmail.com" target="_blank"><i class="fa-brands fa-google"></i></a>
+                        <!-- Icono del menu responsive -->
+                        <div id="icono-nav" onclick="responsiveMenu()">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
                     </div>
                 </div>
             </header>
             <div class="presentacion">
-                <p class="bienvenida">Bienvenidos</p>
-                <h2>Soy <span>Emmanuel Salas Ovalle</span>, Desarrollador Web</h2>
-                <p class="descripcion"></p>
-                
-                <a href="#portfolio">Ir a Portafolio</a>
+                <p class="bienvenida">Hola, mi nombre es</p>
+                <h2><span>Emmanuel Salas Ovalle</span></h2>
+                <p class="typing-text" id="typing-text"></p>
+                <p class="descripcion">Construyo soluciones de IA para el CRM automotriz #1 de Latinoamérica. Automatizo lo que otros hacen a mano.</p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn-primario">Ver mis proyectos</a>
+                    <a href="#contacto" class="btn-secundario">Contáctame</a>
+                </div>
+                <div class="redes hero-redes">
+                    <a href="https://github.com/EmmanuelSO12" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/salas-ovalle-emmanuel-2b5255261/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=525554598655" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:2519260043esalaso@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- SECCION S O B R E M I -->
     <section id="sobremi">
-        <div class="contenedor-foto">
-            <img src="img/fotomia.jpeg" alt="">
+        <div class="contenido-seccion fade-in">
+            <div class="contenedor-foto">
+                <img src="img/fotomia.jpeg" alt="Foto de Emmanuel Salas Ovalle">
+            </div>
+            <div class="sobremi">
+                <p class="titulo-seccion">Sobre Mí</p>
+                <h2>Hola, Soy <span>Emmanuel Salas</span></h2>
+                <h3>Desarrollador de IA &amp; Ingeniero de Software</h3>
+                <p>Transformo procesos manuales en flujos inteligentes. Como <strong>Desarrollador de IA en Seekop Consulting</strong>, construyo las soluciones de Inteligencia Artificial detrás del CRM automotriz líder de Latinoamérica — desde automatización de workflows hasta agentes con procesamiento de lenguaje natural.</p>
+                <p>Fuera del trabajo, construí <strong>mi propio Asistente de IA</strong> que automatiza mis tareas diarias. Creo firmemente que la IA no reemplaza al desarrollador, sino que lo potencia — y lo demuestro usándola en cada línea de código que escribo.</p>
+
+                <h3>Formación Académica</h3>
+                <p>
+                    <strong>Ingeniería en Desarrollo y Gestión de Software</strong> — Enero 2023<br>
+                    Universidad Tecnológica de Tecámac, Estado de México<br>
+                    <em>Tesis: "Desarrollo de una aplicación web para gestión de proyectos ágiles utilizando tecnologías de vanguardia."</em>
+                </p>
+
+                <h3>Certificaciones</h3>
+                <p>
+                    <strong>Cisco — Introduction to IoT</strong> (Junio 2020)<br>
+                    <strong>Cisco — NDG Linux Unhatched</strong> (Marzo 2020)
+                </p>
+
+                <div class="sobremi-btns">
+                    <a href="img/CV_Salas_Ovalle_Emmanuel.pdf" target="_blank" class="btn-cv"><i class="fa-solid fa-download"></i> Descargar CV</a>
+                    <a href="https://github.com/EmmanuelSO12" target="_blank" rel="noopener noreferrer" class="btn-github"><i class="fa-brands fa-github"></i> Ver GitHub</a>
+                </div>
+            </div>
         </div>
-        <div class="sobremi">
-            <p class="titulo-seccion">Sobre Mi</p>
-            <h2>Hola, Soy <span>Emmanuel Salas</span> </h2>
-            <h3>Desarrollador Web</h3>
-            <p>Soy un apasionado Desarrollador de Software y Docente de Robótica e Informática con un enfoque proactivo y analítico. 
-                Mi experiencia abarca un amplio espectro de conocimientos, incluyendo programación, desarrollo de soluciones TIC, y gestión integral de hardware y software.</p>
-            <p>Busco un puesto con posibilidades de crecimiento.</p>
+    </section>
 
-            <h3>Datos de Contacto: </h3>
-                <p>Telefono: 5554598655</p>
-                <p>Correo Electronico: 2519260043esalaso@gmail.com</p>
-
-            <h3>Formacion Academica</h3>
-            <p>
-    <strong>Ingeniería en Desarrollo y Gestión de Software (Actualmente Terminado)</strong><br>
-    Universidad Tecnológica de Tecámac - Tecámac, Estado de México
-</p>
-<p>
-    <strong>Técnico en Mantenimiento de Sistemas Automáticos</strong><br>
-    Preparatoria: Plantel Conalep Tecamac 238
-</p>
-
-            <a href="img/CV_Salas_Ovalle_Emmanuel.pdf" target="_blank">Descargar CV</a>
+    <!-- SECCION C O N T A D O R E S -->
+    <section id="contadores">
+        <div class="contadores-grid">
+            <div class="contador fade-in">
+                <i class="fa-solid fa-briefcase"></i>
+                <span class="contador-numero" data-target="5">0</span>
+                <p>Proyectos Realizados</p>
+            </div>
+            <div class="contador fade-in">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span class="contador-numero" data-target="5">0</span>
+                <p>Años de Experiencia</p>
+            </div>
+            <div class="contador fade-in">
+                <i class="fa-solid fa-brain"></i>
+                <span class="contador-numero" data-target="1">0</span>
+                <p>Proyecto IA Activo</p>
+            </div>
+            <div class="contador fade-in">
+                <i class="fa-solid fa-certificate"></i>
+                <span class="contador-numero" data-target="2">0</span>
+                <p>Certificaciones Cisco</p>
+            </div>
         </div>
     </section>
 
     <!-- SECCION S E R V I C I O S -->
     <section id="servicios">
-        <h3 class="titulo-seccion">MIS SERVICIOS</h3>
-        <div class="fila">
-            <div class="servicio">
-                <span class="icono"> <i class="fa-solid fa-code"></i></span>
-                <h4>Desarrollador de Sitios Web</h4>
-    <hr>
-    <ul class="servicios-tag">
-        <li>Desarrollo Web</li>
-        <li>Optimización para Motores de Búsqueda</li>
-    </ul>
-    <p>
-        Como Desarrollador de Sitios Web, mi responsabilidad fue construir y mantener el sitio web a través de código, asegurando una navegación fácil y una experiencia óptima para el usuario.
-    </p>
-            </div>
-            <div class="servicio">
-                <span class="icono"><i class="fa-solid fa-file-code"></i></span>
-                <h4>Programador Web</h4>
-                <h6>Programación JavaScript, HTML y CSS5</h6>
+        <h3 class="titulo-seccion fade-in">MIS SERVICIOS</h3>
+        <div class="servicios-grid">
+            <div class="servicio fade-in">
+                <span class="icono"><i class="fa-solid fa-brain"></i></span>
+                <h4>Inteligencia Artificial &amp; Automatización</h4>
                 <hr>
                 <ul class="servicios-tag">
-                    <li>Web</li>
-                    <li>Desarrollador</li>
+                    <li>Agentes IA</li>
+                    <li>NLP</li>
+                    <li>n8n</li>
+                    <li>MCP</li>
                 </ul>
-                <p>Mi enfoque en el ámbito web se centró en el desarrollo y mantenimiento de sitios web de alta calidad, utilizando tecnologías como JavaScript, HTML y CSS5 para ofrecer experiencias de usuario destacadas.</p>
+                <p>Desarrollo de soluciones de IA, asistentes inteligentes, automatización de flujos de trabajo con n8n y creación de agentes autónomos con OpenClaw y MCPs.</p>
             </div>
-            <div class="servicio">
+            <div class="servicio fade-in">
+                <span class="icono"><i class="fa-solid fa-code"></i></span>
+                <h4>Desarrollo Web Full Stack</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>NestJS</li>
+                    <li>Python</li>
+                    <li>Docker</li>
+                </ul>
+                <p>Desarrollo de aplicaciones web modernas con NestJS, Python y Docker. Arquitectura backend escalable y despliegue con contenedores.</p>
+            </div>
+            <div class="servicio fade-in">
+                <span class="icono"><i class="fa-solid fa-chalkboard-user"></i></span>
+                <h4>Docencia Tecnológica</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Robótica</li>
+                    <li>Programación</li>
+                    <li>IA</li>
+                </ul>
+                <p>Enseñanza de Robótica, Programación e Inteligencia Artificial, diseñando recursos prácticos y experiencias de aprendizaje interactivas.</p>
+            </div>
+            <div class="servicio fade-in">
                 <span class="icono"><i class="fa-solid fa-arrow-trend-up"></i></span>
-                <h4>Posicionamiento SEO</h4>
+                <h4>SEO &amp; Consultoría TI</h4>
                 <hr>
                 <ul class="servicios-tag">
-                    <li>Web</li>
                     <li>SEO</li>
+                    <li>Consultoría</li>
+                    <li>SQL</li>
                 </ul>
-                <p>Me encargué de implementar estrategias de optimización para motores de búsqueda
-                (SEO) con el objetivo de mejorar la visibilidad y el posicionamiento del sitio web en la web.</p>
-            </div>
-        </div>
-        <div class="fila">
-            <div class="servicio">
-                <span class="icono"><i class="fa-solid fa-palette"></i></span>
-                <h4>Docente de la Materia de Robótica y/o Programación</h4>
-                <hr>
-                <ul class="servicios-tag">
-                    <li>Profesor</li>
-                </ul>
-                <p>Además de enseñar Robótica y Programación, utilicé mis habilidades en desarrollo web, incluyendo JavaScript, HTML y CSS5, para diseñar y mantener sitios web relacionados con la materia, ofreciendo a los estudiantes recursos prácticos y experiencias de aprendizaje interactivas.</p>
-            </div>
-            <div class="servicio">
-                <span class="icono"><i class="fa-solid fa-database"></i></span>
-                <h4>Bases de Datos SQL</h4>
-                <hr>
-                <ul class="servicios-tag">
-                    <li>Web</li>
-                </ul>
-                <p>Como parte de mi trabajo en desarrollo web, también gestioné bases de datos SQL para almacenar y recuperar información de manera eficiente en los sitios web que construí.</p>
-                
-            </div>
-            <div class="servicio">
-                <span class="icono"><i class="fa-solid fa-person-circle-question"></i></span>
-                <h4>Consultor Externo</h4>
-                <hr>
-                <ul class="servicios-tag">
-                    <li>Web</li>
-                </ul>
-                <p>Como consultor externo, aporté mis conocimientos y experiencia en el ámbito web y SEO para asesorar y brindar soluciones a empresas y proyectos externos en relación con sus sitios web y estrategias de SEO.</p>
-                
+                <p>Optimización para buscadores, gestión de bases de datos y asesoría tecnológica para empresas.</p>
             </div>
         </div>
     </section>
 
     <!-- SECCION H A B I L I D A D E S -->
-    <div class="contenedor-skills" id="skills">
-        <h3>HABILIDADES </h3>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Html & Css</p>
-                <span class="porcentaje">85%</span>
+    <section id="skills">
+        <h3 class="titulo-seccion fade-in">TECNOLOGÍAS &amp; HERRAMIENTAS</h3>
+        <div class="skills-grid">
+            <!-- CATEGORIA PRINCIPAL: IA -->
+            <div class="skill-categoria fade-in">
+                <h4><i class="fa-solid fa-brain"></i> Inteligencia Artificial &amp; ML</h4>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fa-solid fa-robot"></i>
+                        <span>OpenClaw</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>Claude</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-microchip"></i>
+                        <span>Codex</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-plug"></i>
+                        <span>MCP Servers</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <span>n8n</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>NLP</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-message"></i>
+                        <span>Prompt Engineering</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                        <span>Agentes IA</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="barra">
-                <div class="" id="html"></div>
+            <!-- BACKEND & LENGUAJES -->
+            <div class="skill-categoria fade-in">
+                <h4><i class="fa-solid fa-server"></i> Backend &amp; Lenguajes</h4>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-brands fa-java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-brands fa-node-js"></i>
+                        <span>NestJS</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-database"></i>
+                        <span>SQL / Alembic</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-cubes"></i>
+                        <span>POO</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>IBM WebSphere</span>
+                    </div>
+                </div>
+            </div>
+            <!-- DEVOPS & HERRAMIENTAS -->
+            <div class="skill-categoria fade-in">
+                <h4><i class="fa-solid fa-tools"></i> DevOps &amp; Colaboración</h4>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <span>Branching & PRs</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-gears"></i>
+                        <span>GitHub Actions</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-brands fa-docker"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-brands fa-linux"></i>
+                        <span>Linux / AIX</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-wind"></i>
+                        <span>Windsurf IDE</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>Terminal</span>
+                    </div>
+                </div>
+            </div>
+            <!-- FRONTEND & OTROS -->
+            <div class="skill-categoria fade-in">
+                <h4><i class="fa-solid fa-laptop-code"></i> Frontend &amp; Otros</h4>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fa-brands fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-brands fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-brands fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <span>IoT</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fa-solid fa-language"></i>
+                        <span>Inglés (A2)</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Javascript</p>
-                <span class="porcentaje">80%</span>
-            </div>
+    </section>
 
-            <div class="barra">
-                <div class="" id="js"></div>
+    <!-- SECCION E X P E R I E N C I A -->
+    <section id="experiencia">
+        <h3 class="titulo-seccion fade-in">EXPERIENCIA LABORAL</h3>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-dot"></div>
+                <div class="timeline-contenido">
+                    <span class="timeline-fecha">Enero 2026 - Presente</span>
+                    <h4>Desarrollador IA</h4>
+                    <p class="timeline-empresa"><i class="fa-solid fa-building"></i> Seekop Consulting — CRM Automotriz Líder en LATAM</p>
+                    <ul>
+                        <li>Desarrollo e integración de soluciones de Inteligencia Artificial en el CRM líder del sector automotriz en Latinoamérica</li>
+                        <li>Automatización de flujos de trabajo con <strong>n8n</strong> para optimizar procesos internos y de atención al cliente</li>
+                        <li>Implementación de <strong>servidores MCP</strong> (Model Context Protocol) para conectar modelos de IA con herramientas y datos</li>
+                        <li>Desarrollo backend con <strong>Python</strong>, <strong>NestJS</strong> y <strong>Docker</strong> para servicios de IA escalables</li>
+                        <li>Migraciones de base de datos con <strong>Alembic</strong> y <strong>SQL</strong></li>
+                        <li>Programación asistida por IA con <strong>Windsurf</strong>, <strong>Claude</strong> y <strong>Codex</strong></li>
+                        <li>Creación de un <strong>Asistente de IA propio</strong> con <strong>OpenClaw</strong> para automatización personal</li>
+                        <li>Procesamiento de Lenguaje Natural (NLP) para comunicación automatizada con prospectos</li>
+                        <li>Colaboración en equipo mediante <strong>GitHub</strong>: flujo de branches, pull requests, code reviews y CI/CD con GitHub Actions</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-dot"></div>
+                <div class="timeline-contenido">
+                    <span class="timeline-fecha">Febrero 2023 - Presente</span>
+                    <h4>Profesor de Asignatura</h4>
+                    <p class="timeline-empresa"><i class="fa-solid fa-building"></i> Centro Escolar Kipling — Tecámac, México</p>
+                    <ul>
+                        <li>Diseño y ejecución de clases de robótica e informática</li>
+                        <li>Desarrollo de material didáctico adaptado a diferentes niveles educativos</li>
+                        <li>Evaluación de desempeño de estudiantes y retroalimentación continua</li>
+                        <li>Fomento del pensamiento lógico y resolución de problemas a través de la tecnología</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-dot"></div>
+                <div class="timeline-contenido">
+                    <span class="timeline-fecha">Febrero 2020 - Enero 2023</span>
+                    <h4>Ejecutivo de Call Center</h4>
+                    <p class="timeline-empresa"><i class="fa-solid fa-building"></i> Sector Automotriz — Tecámac, México</p>
+                    <ul>
+                        <li>Atención a clientes vía telefónica y chat en el sector automotriz</li>
+                        <li>Análisis de datos para mejorar la calidad de atención al cliente</li>
+                        <li>Resolución de incidencias de manera eficiente y proactiva</li>
+                        <li>Gestión de reportes y seguimiento de casos</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-dot"></div>
+                <div class="timeline-contenido">
+                    <span class="timeline-fecha">2020 - 2023</span>
+                    <h4>Proyectos Académicos y de Investigación</h4>
+                    <p class="timeline-empresa"><i class="fa-solid fa-university"></i> Universidad Tecnológica de Tecámac</p>
+                    <ul>
+                        <li>Desarrollo de aplicación web para gestión de proyectos ágiles (Tesis)</li>
+                        <li>Uso de IBM WebSphere Application Server e IBM Integration</li>
+                        <li>Colaboración en investigación sobre sistemas operativos AIX y Linux</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Angular, Spring, Hibernate</p>
-                <span class="porcentaje">50%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="angular"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Bases de Datos</p>
-                <span class="porcentaje">80%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="bd"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Sistemas Operativos</p>
-                <span class="porcentaje">80%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="ps"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Boostrap</p>
-                <span class="porcentaje">85%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="bo"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Mantenimiento Preventivo y Correctivo de Sistemas en Software</p>
-                <span class="porcentaje">90%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="ma"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Dominio de Herramientas Informaticas</p>
-                <span class="porcentaje">90%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="herra"></div>
-            </div>
-        </div>
-
-    <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>IBM WebSphere Application Server, IBM Integration</p>
-                <span class="porcentaje">80%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="ibm"></div>
-            </div>
-        </div>
-
-          <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Sistemas Operativos AIX y Linux</p>
-                <span class="porcentaje">80%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="aix"></div>
-            </div>
-        </div>
-        
-    </div>
+    </section>
 
     <!-- SECCION PORTAFOLIO -->
     <section id="portfolio">
-        <h3 class="titulo-seccion">Mis Proyectos</h3>
-        <div class="fila">
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/Contestador.png" alt="">
-                <div class="info">
-                    
-                    <p>Diseño Web</p>
+        <h3 class="titulo-seccion fade-in">MIS PROYECTOS</h3>
+        <div class="portfolio-grid">
+            <!-- CASE STUDY: Seekop IA -->
+            <div class="proyecto proyecto-destacado fade-in">
+                <div class="proyecto-img">
+                    <img src="img/proyecto-ia-crm.jpg" alt="IA en Seekop Consulting - CRM Automotriz" loading="lazy">
+                    <div class="proyecto-overlay">
+                        <div class="proyecto-links">
+                            <span class="badge-case-study">Case Study</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <span class="proyecto-tipo">Seekop Consulting — Proyecto Empresarial</span>
+                    <h4>Integración de IA en CRM Automotriz</h4>
+                    <p><strong>Problema:</strong> Los equipos de ventas procesaban leads manualmente, perdiendo oportunidades. <strong>Solución:</strong> Desarrollé agentes de IA con NLP para clasificar y responder prospectos automáticamente, e implementé flujos con n8n que redujeron tiempos de respuesta.</p>
+                    <div class="proyecto-tags">
+                        <span>Python</span>
+                        <span>n8n</span>
+                        <span>NLP</span>
+                        <span>MCP</span>
+                        <span>Docker</span>
+                    </div>
                 </div>
             </div>
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/papilia.png" alt="">
-                <div class="info">
-                    
-                    <p>Diseño Web</p>
+            <!-- CASE STUDY: Automatización Seekop -->
+            <div class="proyecto proyecto-destacado fade-in">
+                <div class="proyecto-img">
+                    <img src="img/proyecto-workflows.jpg" alt="Automatización de Workflows con n8n" loading="lazy">
+                    <div class="proyecto-overlay">
+                        <div class="proyecto-links">
+                            <span class="badge-case-study">Case Study</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <span class="proyecto-tipo">Seekop Consulting — Proyecto Empresarial</span>
+                    <h4>Automatización de Workflows con MCP &amp; n8n</h4>
+                    <p><strong>Problema:</strong> Procesos repetitivos consumían horas del equipo. <strong>Solución:</strong> Diseñé servidores MCP que conectan modelos de IA con herramientas internas, y orquesté workflows automáticos con n8n para notificaciones, reportes y seguimiento de clientes.</p>
+                    <div class="proyecto-tags">
+                        <span>MCP Servers</span>
+                        <span>n8n</span>
+                        <span>NestJS</span>
+                        <span>Alembic</span>
+                        <span>SQL</span>
+                    </div>
                 </div>
             </div>
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/prin.png" alt="">
-                <div class="info">
-                    
-                    <p>Diseño Web</p>
+            <!-- PROYECTO REAL: Asistente IA Personal -->
+            <div class="proyecto fade-in">
+                <div class="proyecto-img">
+                    <img src="img/proyecto-asistente-ia-v2.jpg" alt="Asistente de IA Personal con OpenClaw" loading="lazy">
+                    <div class="proyecto-overlay">
+                        <div class="proyecto-links">
+                            <a href="https://github.com/EmmanuelSO12" target="_blank" rel="noopener noreferrer" aria-label="Ver código"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <span class="proyecto-tipo">Proyecto Personal</span>
+                    <h4>Asistente de IA Personal</h4>
+                    <p>Mi propio agente de IA construido con OpenClaw que automatiza tareas diarias: gestión de archivos, búsquedas inteligentes, resúmenes automáticos y control de herramientas locales mediante lenguaje natural.</p>
+                    <div class="proyecto-tags">
+                        <span>OpenClaw</span>
+                        <span>Claude</span>
+                        <span>Python</span>
+                        <span>Agentes IA</span>
+                    </div>
+                </div>
+            </div>
+            <!-- PROYECTO REAL: Este Portafolio -->
+            <div class="proyecto fade-in">
+                <div class="proyecto-img">
+                    <img src="img/proyecto-portafolio.jpg" alt="Portafolio Digital Profesional" loading="lazy">
+                    <div class="proyecto-overlay">
+                        <div class="proyecto-links">
+                            <a href="#inicio" aria-label="Ver demo"><i class="fa-solid fa-eye"></i></a>
+                            <a href="https://github.com/EmmanuelSO12/trabajo-portafolio-CV" target="_blank" rel="noopener noreferrer" aria-label="Ver código"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <span class="proyecto-tipo">Proyecto Personal</span>
+                    <h4>Portafolio Digital Profesional</h4>
+                    <p>Este sitio web. Diseñado desde cero con HTML, CSS y JavaScript puro. Incluye dark mode, animaciones por scroll, typing effect, diseño responsive y optimización SEO.</p>
+                    <div class="proyecto-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>SEO</span>
+                    </div>
+                </div>
+            </div>
+            <!-- PROYECTO REAL: Tesis -->
+            <div class="proyecto fade-in">
+                <div class="proyecto-img">
+                    <img src="img/proyecto-tesis.jpg" alt="Gestión de Proyectos Ágiles - Tesis" loading="lazy">
+                    <div class="proyecto-overlay">
+                        <div class="proyecto-links">
+                            <span class="badge-case-study">Tesis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <span class="proyecto-tipo">Proyecto Académico — UTT</span>
+                    <h4>App Web de Gestión de Proyectos Ágiles</h4>
+                    <p>Aplicación web desarrollada como tesis de ingeniería. Implementada con IBM WebSphere e IBM Integration para gestión de proyectos con metodologías ágiles. Incluye módulos de tareas, sprints y reportes.</p>
+                    <div class="proyecto-tags">
+                        <span>IBM WebSphere</span>
+                        <span>IBM Integration</span>
+                        <span>Java</span>
+                        <span>SQL</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="fila">
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/pro.png" alt="">
-                <div class="info">
-                   
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/mari.png" alt="">
-                <div class="info">
-                    
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/demas.png" alt="">
-                <div class="info">
-                    
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-        </div>
-        
     </section>
 
-    <!-- SECCTION C O N T A C T O -->
-
+    <!-- SECCION C O N T A C T O -->
     <section id="contacto">
-        <h3 class="titulo-seccion">Contactanos ahora</h3>
-        <div class="contenedor-form">
-            <form action="https://formspree.io/f/mgebvbpy"
-                    method="POST">
-                <div class="fila mitad">
-                    <input type="text" name="name "placeholder="Nombre Completo *" class="input-mitad" required>
-                    <input type="email" name="email" placeholder="Dirección de Email" class="input-mitad" required>
+        <h3 class="titulo-seccion fade-in">CONTÁCTAME</h3>
+        <div class="contacto-contenedor">
+            <div class="contacto-info fade-in">
+                <h4>Hablemos de tu proyecto</h4>
+                <p>¿Tienes una idea o necesitas un desarrollador? No dudes en contactarme.</p>
+                <div class="contacto-detalles">
+                    <div class="contacto-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>2519260043esalaso@gmail.com</span>
+                    </div>
+                    <div class="contacto-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>55 5459 8655</span>
+                    </div>
+                    <div class="contacto-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Tecámac, Estado de México</span>
+                    </div>
                 </div>
-                
-                <div class="fila">
-                    <textarea name="mesagge" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full" required></textarea>
+                <div class="redes contacto-redes">
+                    <a href="https://github.com/EmmanuelSO12" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/salas-ovalle-emmanuel-2b5255261/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=525554598655" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
-
-                <input type="submit" value="Enviar Mensaje" class="btn-enviar">
-            </form>
+            </div>
+            <div class="contenedor-form fade-in">
+                <form action="https://formspree.io/f/mgebvbpy" method="POST">
+                    <input type="text" name="name" placeholder="Nombre Completo *" required>
+                    <input type="email" name="email" placeholder="Dirección de Email *" required>
+                    <input type="text" name="subject" placeholder="Asunto">
+                    <textarea name="message" cols="30" rows="7" placeholder="Tu Mensaje..." required></textarea>
+                    <button type="submit" class="btn-enviar"><i class="fa-solid fa-paper-plane"></i> Enviar Mensaje</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- SECCION FOOTER -->
     <footer>
-        <p>Todos los derechos reservados EmmanuelSO- 2024</p>
-        <div class="redes">
-                        <a href="https://api.whatsapp.com/send?phone=525554598655" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://www.linkedin.com/in/salas-ovalle-emmanuel-2b5255261/"><i class="fa-brands fa-linkedin" target="_blank" rel="noopener noreferrer"></i></a>
-                        <a href="mailto:2519260043esalaso@gmail.com"><i class="fa-brands fa-google"></i></a>
-                    </div>
-
+        <div class="footer-contenido">
+            <div class="footer-brand">
+                <h3>/Emmanuel SO/</h3>
+                <p>Desarrollador de IA &amp; Ingeniero de Software</p>
+            </div>
+            <div class="footer-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#sobremi">Sobre Mí</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="redes footer-redes">
+                <a href="https://github.com/EmmanuelSO12" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/salas-ovalle-emmanuel-2b5255261/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=525554598655" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:2519260043esalaso@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Emmanuel Salas Ovalle. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <!-- Botón volver arriba -->
+    <button id="btn-arriba" aria-label="Volver arriba">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
