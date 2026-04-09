@@ -1,4 +1,16 @@
 // ============================
+// PRELOADER
+// ============================
+window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+        setTimeout(function () {
+            preloader.classList.add("loaded");
+        }, 1600);
+    }
+});
+
+// ============================
 // TYPING EFFECT
 // ============================
 const frases = [
