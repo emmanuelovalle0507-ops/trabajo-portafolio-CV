@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV — Emmanuel Salas Ovalle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a2e;
+            background: #fff;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .cv {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 50px;
+        }
+
+        /* HEADER */
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid #7c3aed;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .cv-header-left h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+
+        .cv-header-left h2 {
+            font-size: 15px;
+            font-weight: 500;
+            color: #7c3aed;
+            margin-bottom: 10px;
+        }
+
+        .cv-header-left .summary {
+            max-width: 420px;
+            font-size: 12px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .cv-header-right {
+            text-align: right;
+            font-size: 12px;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .cv-header-right a {
+            color: #7c3aed;
+            text-decoration: none;
+        }
+
+        .cv-header-right a:hover {
+            text-decoration: underline;
+        }
+
+        /* SECTIONS */
+        .cv-section {
+            margin-bottom: 22px;
+        }
+
+        .cv-section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #7c3aed;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+        /* EXPERIENCE */
+        .cv-entry {
+            margin-bottom: 16px;
+        }
+
+        .cv-entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .cv-entry-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .cv-entry-date {
+            font-size: 12px;
+            font-weight: 600;
+            color: #7c3aed;
+            white-space: nowrap;
+        }
+
+        .cv-entry-company {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+
+        .cv-entry ul {
+            padding-left: 18px;
+        }
+
+        .cv-entry ul li {
+            font-size: 12px;
+            color: #333;
+            margin-bottom: 3px;
+            line-height: 1.5;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .skill-group h4 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+
+        .skill-group p {
+            font-size: 12px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* PROJECTS */
+        .cv-project {
+            margin-bottom: 12px;
+        }
+
+        .cv-project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .cv-project-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .cv-project-tech {
+            font-size: 11px;
+            color: #7c3aed;
+            font-weight: 500;
+        }
+
+        .cv-project p {
+            font-size: 12px;
+            color: #444;
+            line-height: 1.5;
+            margin-top: 2px;
+        }
+
+        .cv-project a {
+            font-size: 11px;
+            color: #7c3aed;
+            text-decoration: none;
+        }
+
+        /* EDUCATION & CERTS */
+        .cv-edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .cv-edu-title {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .cv-edu-date {
+            font-size: 12px;
+            color: #7c3aed;
+            font-weight: 600;
+        }
+
+        .cv-edu-school {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .cv-edu-detail {
+            font-size: 12px;
+            color: #444;
+            margin-top: 2px;
+        }
+
+        .cert-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cert-list li {
+            font-size: 12px;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .cert-list li span {
+            color: #888;
+            font-size: 11px;
+        }
+
+        /* PRINT */
+        @media print {
+            body { font-size: 12px; }
+            .cv { padding: 20px 30px; }
+            .cv-header { border-bottom-width: 2px; }
+            a { color: #7c3aed !important; }
+        }
+
+        @page {
+            margin: 0.5cm;
+            size: letter;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv">
+
+        <!-- HEADER -->
+        <div class="cv-header">
+            <div class="cv-header-left">
+                <h1>Emmanuel Salas Ovalle</h1>
+                <h2>Desarrollador de IA & Ingeniero de Software</h2>
+                <p class="summary">Transformo procesos manuales en flujos inteligentes. Desarrollo soluciones de IA para el CRM automotriz líder de Latinoamérica — desde automatización de workflows hasta agentes con procesamiento de lenguaje natural.</p>
+            </div>
+            <div class="cv-header-right">
+                📍 Tecámac, Estado de México<br>
+                📧 2519260043esalaso@gmail.com<br>
+                📱 55 5459 8655<br>
+                🔗 <a href="https://github.com/emmanuelovalle0507-ops">github.com/emmanuelovalle0507-ops</a><br>
+                🔗 <a href="https://www.linkedin.com/in/salas-ovalle-emmanuel-2b5255261/">LinkedIn</a> · <a href="https://emmanuelovalle0507-ops.github.io/trabajo-portafolio-CV/">Portafolio</a>
+            </div>
+        </div>
+
+        <!-- EXPERIENCIA -->
+        <div class="cv-section">
+            <h3 class="cv-section-title">Experiencia Profesional</h3>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <span class="cv-entry-title">Desarrollador de IA</span>
+                    <span class="cv-entry-date">Enero 2026 — Presente</span>
+                </div>
+                <p class="cv-entry-company">Seekop Consulting — CRM Automotriz Líder en LATAM</p>
+                <ul>
+                    <li>Desarrollo e integración de soluciones de Inteligencia Artificial en el CRM líder del sector automotriz en Latinoamérica</li>
+                    <li>Diseñé agentes de IA con NLP para clasificar y responder prospectos automáticamente, reduciendo tiempos de respuesta del equipo de ventas</li>
+                    <li>Automatización de flujos de trabajo con <strong>n8n</strong> para optimizar procesos internos y de atención al cliente</li>
+                    <li>Implementación de <strong>servidores MCP</strong> (Model Context Protocol) para conectar modelos de IA con herramientas y datos internos</li>
+                    <li>Desarrollo backend con <strong>Python (FastAPI)</strong>, <strong>NestJS</strong> y <strong>Docker</strong> para servicios de IA escalables</li>
+                    <li>Desarrollo frontend con <strong>Next.js 15</strong>, <strong>React 18</strong>, <strong>TypeScript</strong> y <strong>TailwindCSS</strong></li>
+                    <li>Migraciones de base de datos con <strong>Alembic</strong> y <strong>PostgreSQL</strong></li>
+                    <li>Colaboración en equipo mediante <strong>GitHub</strong>: branches, pull requests, code reviews y CI/CD con GitHub Actions</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <span class="cv-entry-title">Profesor de Asignatura</span>
+                    <span class="cv-entry-date">Febrero 2023 — Presente</span>
+                </div>
+                <p class="cv-entry-company">Centro Escolar Kipling — Tecámac, Estado de México</p>
+                <ul>
+                    <li>Diseño y ejecución de clases de robótica, programación e informática</li>
+                    <li>Desarrollo de material didáctico adaptado a diferentes niveles educativos</li>
+                    <li>Fomento del pensamiento lógico y resolución de problemas a través de la tecnología</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <span class="cv-entry-title">Ejecutivo de Call Center</span>
+                    <span class="cv-entry-date">Febrero 2020 — Enero 2023</span>
+                </div>
+                <p class="cv-entry-company">Sector Automotriz — Tecámac, Estado de México</p>
+                <ul>
+                    <li>Atención a clientes vía telefónica y chat en el sector automotriz</li>
+                    <li>Análisis de datos para mejorar la calidad de atención al cliente</li>
+                    <li>Resolución de incidencias de manera eficiente y proactiva</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- HABILIDADES TÉCNICAS -->
+        <div class="cv-section">
+            <h3 class="cv-section-title">Habilidades Técnicas</h3>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h4>IA & Automatización</h4>
+                    <p>NLP, Agentes IA, RAG (pgvector), Prompt Engineering, n8n, MCP Servers, OpenClaw, Claude, Codex</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Backend</h4>
+                    <p>Python, FastAPI, NestJS, Java, SQL, PostgreSQL, Alembic, Supabase, SQLAlchemy</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Frontend</h4>
+                    <p>React, Next.js, TypeScript, TailwindCSS, HTML5, CSS3, JavaScript, Angular</p>
+                </div>
+                <div class="skill-group">
+                    <h4>DevOps & Colaboración</h4>
+                    <p>GitHub, Git, GitHub Actions, Docker, Linux, Windsurf IDE, Terminal</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTOS DESTACADOS -->
+        <div class="cv-section">
+            <h3 class="cv-section-title">Proyectos Destacados</h3>
+
+            <div class="cv-project">
+                <div class="cv-project-header">
+                    <span class="cv-project-title">Nox — Asistente de IA Personal</span>
+                    <span class="cv-project-tech">FastAPI · Next.js · TypeScript · Supabase · RAG</span>
+                </div>
+                <p>Asistente full-stack con chat en streaming (SSE), búsqueda web, memoria a largo plazo, ingesta de documentos con RAG, historial de conversaciones y soporte de voz.</p>
+                <a href="https://github.com/emmanuelovalle0507-ops/nox-ai-assistant">→ github.com/emmanuelovalle0507-ops/nox-ai-assistant</a>
+            </div>
+
+            <div class="cv-project">
+                <div class="cv-project-header">
+                    <span class="cv-project-title">ApliWeb-Vacaciones — Sistema de Gestión (Seekop)</span>
+                    <span class="cv-project-tech">FastAPI · Next.js 15 · TypeScript · PostgreSQL · Docker</span>
+                </div>
+                <p>Aplicación full-stack con 4 roles (Employee, Manager, Admin, RRHH) para gestión de vacaciones. Backend con FastAPI + SQLAlchemy + Alembic, frontend con Next.js 15 + React 18 + TailwindCSS.</p>
+                <a href="https://github.com/emmanuelovalle0507-ops/ApliWeb-Vacaciones">→ github.com/emmanuelovalle0507-ops/ApliWeb-Vacaciones</a>
+            </div>
+
+            <div class="cv-project">
+                <div class="cv-project-header">
+                    <span class="cv-project-title">Integración de IA en CRM Automotriz (Seekop)</span>
+                    <span class="cv-project-tech">Python · n8n · NLP · MCP · Docker</span>
+                </div>
+                <p>Agentes de IA con NLP para clasificar y responder prospectos automáticamente. Flujos automáticos con n8n que redujeron tiempos de respuesta del equipo de ventas.</p>
+            </div>
+        </div>
+
+        <!-- EDUCACIÓN -->
+        <div class="cv-section">
+            <h3 class="cv-section-title">Educación</h3>
+            <div class="cv-entry">
+                <div class="cv-edu-header">
+                    <span class="cv-edu-title">Ingeniería en Desarrollo y Gestión de Software</span>
+                    <span class="cv-edu-date">Enero 2023</span>
+                </div>
+                <p class="cv-edu-school">Universidad Tecnológica de Tecámac, Estado de México</p>
+                <p class="cv-edu-detail">Tesis: "Desarrollo de una aplicación web para gestión de proyectos ágiles utilizando tecnologías de vanguardia."</p>
+            </div>
+        </div>
+
+        <!-- CERTIFICACIONES -->
+        <div class="cv-section">
+            <h3 class="cv-section-title">Certificaciones</h3>
+            <ul class="cert-list">
+                <li><strong>Cisco — Introduction to IoT</strong> <span>(Junio 2020)</span></li>
+                <li><strong>Cisco — NDG Linux Unhatched</strong> <span>(Marzo 2020)</span></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
